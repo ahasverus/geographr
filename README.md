@@ -3,7 +3,7 @@
 An R package to have fun with geography.
 
 <!-- ![Screenshot](./example.png) -->
-<img src="./example.png" width="100px" />
+<img src="./example.png" width="450px" />
 
 ## Installation
 
