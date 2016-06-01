@@ -2,12 +2,14 @@
 
 An R package to have fun with geography.
 
+![Screenshot](./example.png)
+
 ## Installation
 
 You can install this package from Github:
 
 ```r
-### First install the devtools package
+### First install the devtools package (if not already installed)
 install.packages('devtools')
 library(devtools)
 
@@ -16,6 +18,8 @@ devtools::install_github('ahasverus/geographr')
 ```
 
 ## Documentation
+
+The `geographr` package contains four main functions.
 
 ###### Learn about countries geography and flag
 
