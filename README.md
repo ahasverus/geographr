@@ -17,20 +17,30 @@ devtools::install_github('ahasverus/geographr')
 
 ## Documentation
 
-1. Learn about countries geography and flag:
+#### Learn about countries geography and flag:
 
 ```r
 learn_country()
 ```
 
-2. Try to locate countries on map
+#### Try to identify country on map
 
 ```r
 where_is(region = 'africa')
 where_is(region = 'europa', lang = 'fr')
 ```
 
-3.
+#### Try to find country from its flag
+
+```r
+guess_flag()
+```
+
+#### Try to locate country on map
+
+```r
+guess_country()
+```
 
 ## License
 
