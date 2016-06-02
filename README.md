@@ -55,7 +55,7 @@ find_cities(country = 'france', n = 10)
 
 ## Notes
 
-For a better visual experience, do not resize graphical windows please.
+For a better visual experience, please do not resize graphical windows.
 
 ## License
 
