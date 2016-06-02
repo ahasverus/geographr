@@ -15,35 +15,40 @@ library(devtools)
 
 ### Then install the geographr package
 devtools::install_github('ahasverus/geographr')
+
+### And load the package
+library(geographr)
 ```
 
 ## Documentation
 
 The `geographr` package contains four main functions.
 
-###### Learn about countries geography and flag
+##### Learn about countries geography and flag
 
 ```r
-learn_country()
+learn_country(region = 'world')
+learn_country(region = 'south america')
 ```
 
-###### Try to identify country on map
+##### Try to identify country on map
 
 ```r
 where_is(region = 'africa')
 where_is(region = 'europa', lang = 'fr')
 ```
 
-###### Try to find country from its flag
+##### Try to find country from its flag
 
 ```r
-guess_flag()
+what_flag(region = 'world')
+what_flag(region = 'asia', lang = 'en')
 ```
 
-###### Try to locate country on map
+##### Try to locate cities on map
 
 ```r
-guess_country()
+by_cities(country = 'france', n = 10)
 ```
 
 ## License
