@@ -22,36 +22,40 @@ library(geographr)
 
 The `geographr` package contains four main functions.
 
-##### Learn about countries geography and flag
+#### Learn about countries geography and flag
 
 ```r
-learn_country(region = 'world')
-learn_country(region = 'south america')
+learning(region = 'world')
+learning(region = 'south america')
 ```
 
 ![Screenshot](./example1.png)
 
-##### Try to identify country on map
+#### Try to identify country on map
 
 ```r
-where_is(region = 'africa')
-where_is(region = 'europa', lang = 'fr')
+find_country(region = 'africa')
+find_country(region = 'europa', lang = 'fr')
 ```
 
 ![Screenshot](./example2.png)
 
-##### Try to find country from its flag
+#### Try to find country from its flag
 
 ```r
-what_flag(region = 'world')
-what_flag(region = 'asia', lang = 'en')
+find_flag(region = 'world')
+find_flag(region = 'asia', lang = 'en')
 ```
 
-##### Try to locate cities on map
+#### Try to locate cities on map
 
 ```r
-by_cities(country = 'france', n = 10)
+find_cities(country = 'france', n = 10)
 ```
+
+## Notes
+
+For a better visual experience, do not resize graphical windows please.
 
 ## License
 
