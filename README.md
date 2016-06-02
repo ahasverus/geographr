@@ -22,7 +22,7 @@ library(geographr)
 
 The `geographr` package contains four main functions.
 
-#### Learn about countries geography and flag
+#### Refine your geographic skills
 
 ```r
 learning(region = 'world')
@@ -31,7 +31,7 @@ learning(region = 'south america')
 
 ![Screenshot](./example1.png)
 
-#### Try to identify country on map
+#### Identify countries on the map
 
 ```r
 find_country(region = 'africa')
@@ -40,14 +40,14 @@ find_country(region = 'europa', lang = 'fr')
 
 ![Screenshot](./example2.png)
 
-#### Try to find country from its flag
+#### Identify national flags
 
 ```r
 find_flag(region = 'world')
 find_flag(region = 'asia', lang = 'en')
 ```
 
-#### Try to locate cities on map
+#### Locate cities on the map
 
 ```r
 find_cities(country = 'france', n = 10)
