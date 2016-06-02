@@ -11,9 +11,9 @@ You can install this package from Github:
 ```r
 ### First install the devtools package (if not already installed)
 install.packages('devtools')
-library(devtools)
 
 ### Then install the geographr package
+library(devtools)
 devtools::install_github('ahasverus/geographr')
 
 ### And load the package
@@ -48,6 +48,8 @@ find_country(region = 'europa', lang = 'fr')
 find_flag(region = 'world')
 find_flag(region = 'asia', lang = 'en')
 ```
+
+![Screenshot](./example3.png)
 
 #### Locate cities on the map
 
