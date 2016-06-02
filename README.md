@@ -2,8 +2,6 @@
 
 An R package to have fun with geography.
 
-![Screenshot](./example.png)
-
 ## Installation
 
 You can install this package from Github:
@@ -31,12 +29,16 @@ learn_country(region = 'world')
 learn_country(region = 'south america')
 ```
 
+![Screenshot](./example1.png)
+
 ##### Try to identify country on map
 
 ```r
 where_is(region = 'africa')
 where_is(region = 'europa', lang = 'fr')
 ```
+
+![Screenshot](./example2.png)
 
 ##### Try to find country from its flag
 
