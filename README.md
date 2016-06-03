@@ -100,6 +100,8 @@ More than 40,000 towns are available. For instance, one thousand are available f
 
 The argument `lang` defines the language of the interface. But it has no impact when you search for a specific region/country: `find_cities('spain')` is the same as `find_cities('Espagne')`. Moreover search based on region and country is case-insensitive.
 
+At the end of each function, take a look at the R console: some statistics are provided.
+
 Cities and world shapefile come from the [maps](https://cran.r-project.org/web/packages/maps/index.html) package. High resolution shapefiles come from [GADM](http://gadm.org).
 
 For a better visual experience, please do not resize graphical windows.
