@@ -1,3 +1,3 @@
-export(find_cities, find_flag, find_country, get_country_name, get_region_name, learning)
+export(find_cities, find_flag, find_country, find_region, get_country_name, get_region_name, learning)
 
 import(maps, mapproj, sp, png)

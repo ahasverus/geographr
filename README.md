@@ -20,7 +20,7 @@ library(geographr)
 
 ## Documentation
 
-The `geographr` package contains six main functions. All of these functions are available in two different languages: english (en) and french (fr). English is the default in all the functions.
+The `geographr` package contains seven main functions. All of these functions are available in two different languages: english (en) and french (fr). English is the default in all the functions.
 
 #### Refine your geographic skills
 
@@ -78,6 +78,21 @@ find_flag(region = 'asia', lang = 'fr')
 ```
 
 ![Screenshot](./example3.png)
+
+#### Locate regions on the country map
+
+```r
+#### Default settings (random country)
+find_region(country = NULL, lang = 'en')
+
+#### Short version
+find_region()
+
+#### User settings usage
+find_region(country = 'spain', lang = 'en')
+```
+
+![Screenshot](./example5.png)
 
 #### Locate n cities on the map
 

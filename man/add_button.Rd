@@ -19,6 +19,7 @@
 \alias{onclic}
 \alias{onclic2}
 \alias{onclic3}
+\alias{onclic4}
 
 \title{geographr internal functions}
 
