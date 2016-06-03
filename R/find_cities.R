@@ -11,7 +11,7 @@ function(country = NULL, lang = 'en', n = 10){
     res <- kk <- 0
 
     if (is.null(country))
-        pos <- sample(1:nrow(countries), 1)
+        country <- countries[sample(1:nrow(countries), 1), 'country_en']
 
     pos <- which(tolower(countries[ , 'country_en']) == tolower(country) |
                  tolower(countries[ , 'country_fr']) == tolower(country))

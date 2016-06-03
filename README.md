@@ -2,11 +2,11 @@
 
 # geographr
 
-An R package to have fun with geography.
+An R package to test your skills in world geography.
 
 ## Installation
 
-You can install this package from Github:
+You can install this package from Github.
 
 ```r
 ### First install the devtools package (if not already installed)
@@ -22,22 +22,46 @@ library(geographr)
 
 ## Documentation
 
-The `geographr` package contains four main functions.
+The `geographr` package contains six main functions. All of these functions are available in two different languages: english (en) and french (fr). English is the default in all the functions.
 
 #### Refine your geographic skills
 
 ```r
-learning(region = 'world')
-learning(region = 'south america')
+#### Default settings
+learning(region = 'world', lang = 'en')
+
+#### Short version
+learning()
+
+#### User settings usage
+learning(region = 'south america', lang = 'fr')
 ```
 
 ![Screenshot](./example1.png)
 
+#### Getting the correct spelling of countries and regions
+
+```r
+#### Get the correct spelling of regions
+get_region_name()
+get_region_name(lang = 'fr')
+
+#### Get the correct spelling of countries
+get_country_name()
+get_country_name(lang = 'fr')
+```
+
 #### Identify countries on the map
 
 ```r
-find_country(region = 'africa')
-find_country(region = 'europa', lang = 'fr')
+#### Default settings
+find_country(region = 'europa', lang = 'en')
+
+#### Short version
+find_country()
+
+#### User settings usage
+find_country(region = 'africa', lang = 'fr')
 ```
 
 ![Screenshot](./example2.png)
@@ -45,21 +69,39 @@ find_country(region = 'europa', lang = 'fr')
 #### Identify national flags
 
 ```r
-find_flag(region = 'world')
-find_flag(region = 'asia', lang = 'en')
+#### Default settings
+find_flag(region = 'world', lang = 'en')
+
+#### Short version
+find_flag()
+
+#### User settings usage
+find_flag(region = 'asia', lang = 'fr')
 ```
 
 ![Screenshot](./example3.png)
 
-#### Locate cities on the map
+#### Locate n cities on the map
 
 ```r
-find_cities(country = 'france', n = 10)
+#### User settings usage
+find_cities(country = 'france', n = 10, lang = 'en')
+
+#### or
+find_cities(country = 'FrAnCe', n = 10, lang = 'en')
 ```
+
+![Screenshot](./example4.png)
+
+Do not overload the map with a too higher number of towns.
 
 ## Notes
 
+Cities and world shapefile come from the [maps](https://cran.r-project.org/web/packages/maps/index.html) package. High resolution shapefiles come from [GADM](http://gadm.org).
+
 For a better visual experience, please do not resize graphical windows.
+
+The function `find_cities()` needs more development. But it works. Enjoy!
 
 ## License
 

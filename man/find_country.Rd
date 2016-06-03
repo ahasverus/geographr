@@ -6,7 +6,7 @@
 \description{Identify countries on the map}
 
 \usage{
-    find_country(region = "Europa", lang = "fr")
+    find_country(region = "Europa", lang = "en")
 }
 
 \arguments{

@@ -1,5 +1,5 @@
 find_flag <-
-function(region = 'Europa', lang = 'fr'){
+function(region = 'Europa', lang = 'en'){
 
     if (!(tolower(substr(lang, 1, 2)) %in% c('en', 'fr')))
         stop('Possible values for lang: fr or en')

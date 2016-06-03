@@ -6,7 +6,7 @@
 \description{Identify national flags}
 
 \usage{
-    find_flag(region = "Europa", lang = "fr")
+    find_flag(region = "Europa", lang = "en")
 }
 
 \arguments{
