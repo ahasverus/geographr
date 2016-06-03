@@ -51,7 +51,7 @@ function(country = NULL, lang = 'en', n = 10){
 
             par(bg = '#969696', mar = c(1, 2, 5, 7), family = 'serif', xaxs = 'i', yaxs = 'i')
 
-            shp <- readRDS(paste('./data/gis/', iso, '.rds', sep = ''))
+            shp <- readRDS(system.file(paste('external/gis/', iso, '.rds', sep = ''), package = "geographr"))
 
             if (!is.na(xrng[1])){
                 plot(shp, col = '#333333', border = '#969696', axes = FALSE, xlim = xrng, ylim = yrng)
