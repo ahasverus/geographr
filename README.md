@@ -1,5 +1,3 @@
-> In development...
-
 # geographr
 
 An R package to test your skills in world geography.
@@ -92,9 +90,6 @@ find_cities()
 
 #### User settings usage
 find_cities(country = 'france', n = 10, lang = 'en')
-
-#### or
-find_cities(country = 'FrAnCe', n = 10, lang = 'en')
 ```
 
 ![Screenshot](./example4.png)
@@ -102,6 +97,8 @@ find_cities(country = 'FrAnCe', n = 10, lang = 'en')
 More than 40,000 towns are available. For instance, one thousand are available for France. But do not overload the map with a too higher number of towns. It will be unclickable...
 
 ## Notes
+
+The argument `lang` defines the language of the interface. But it has no impact when you search for a specific region/country: `find_cities('spain')` is the same as `find_cities('Espagne')`. Moreover search based on region and country is case-insensitive.
 
 Cities and world shapefile come from the [maps](https://cran.r-project.org/web/packages/maps/index.html) package. High resolution shapefiles come from [GADM](http://gadm.org).
 
