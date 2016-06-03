@@ -84,6 +84,12 @@ find_flag(region = 'asia', lang = 'fr')
 #### Locate n cities on the map
 
 ```r
+#### Default settings (random country)
+find_cities(country = NULL, n = 10, lang = 'en')
+
+#### Short version
+find_cities()
+
 #### User settings usage
 find_cities(country = 'france', n = 10, lang = 'en')
 
@@ -93,7 +99,7 @@ find_cities(country = 'FrAnCe', n = 10, lang = 'en')
 
 ![Screenshot](./example4.png)
 
-Do not overload the map with a too higher number of towns.
+More than 40,000 towns are available. For instance, one thousand are available for France. But do not overload the map with a too higher number of towns. It will be unclickable...
 
 ## Notes
 
@@ -102,6 +108,10 @@ Cities and world shapefile come from the [maps](https://cran.r-project.org/web/p
 For a better visual experience, please do not resize graphical windows.
 
 The function `find_cities()` needs more development. But it works. Enjoy!
+
+## Acknowledgments
+
+Special thanks to [KevCaz](https://github.com/kevcaz) and [SteveViss](https://github.com/SteveViss) for their feedbacks ;)
 
 ## License
 
