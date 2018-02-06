@@ -28,9 +28,9 @@ function(country = NULL, lang = 'en'){
         xrng    <- c(countries[pos, 'xmn'], countries[pos, 'xmx'])
         yrng    <- c(countries[pos, 'ymn'], countries[pos, 'ymx'])
 
-        if (!is.na(xrng[1])){
-            poly <- data.frame(x = c(xrng[1], xrng[1], xrng[2], xrng[2], xrng[1]),
-                               y = c(yrng[1], yrng[2], yrng[2], yrng[1], yrng[1]))
+        if (!is.na(xrng[1L])){
+            poly <- data.frame(x = c(xrng[1L], xrng[1L], xrng[2L], xrng[2L], xrng[1L]),
+                               y = c(yrng[1L], yrng[2L], yrng[2L], yrng[1L], yrng[1L]))
             poly <- SpatialPolygons(list(Polygons(list(Polygon(poly)), '0')))
             proj4string(poly) <- proj4string(shp)
             ids <- over(shp, poly)
@@ -48,7 +48,7 @@ function(country = NULL, lang = 'en'){
 
             par(bg = '#969696', mar = c(1, 2, 5, 7), family = 'serif', xaxs = 'i', yaxs = 'i')
 
-            if (!is.na(xrng[1])){
+            if (!is.na(xrng[1L])){
                 plot(shp, col = '#333333', border = '#969696', axes = FALSE, xlim = xrng, ylim = yrng)
             } else {
                 plot(shp, col = '#333333', border = '#969696', axes = FALSE)
@@ -65,18 +65,18 @@ function(country = NULL, lang = 'en'){
                     plot(shp[which(shp@data[ , name] == reg[j-1]), ], col = '#333333', border = '#969696', add = TRUE)
 
                 par(xpd = TRUE)
-                rect(par()$usr[2] + (par()$usr[2]-par()$usr[1])/30, par()$usr[3] - (par()$usr[4]-par()$usr[3])/2,
-                     par()$usr[2] + (par()$usr[2]-par()$usr[1])/2, par()$usr[4] + (par()$usr[4]-par()$usr[3])/2,
+                rect(par()$usr[2L] + (par()$usr[2L]-par()$usr[1L])/30, par()$usr[3] - (par()$usr[4]-par()$usr[3])/2,
+                     par()$usr[2L] + (par()$usr[2L]-par()$usr[1L])/2, par()$usr[4] + (par()$usr[4]-par()$usr[3])/2,
                      col = '#969696', border = NA)
-                rect(par()$usr[1] - (par()$usr[2]-par()$usr[1])/2, par()$usr[4] + (par()$usr[4]-par()$usr[3])/45,
-                     par()$usr[2] + (par()$usr[2]-par()$usr[1])/2, par()$usr[4] + (par()$usr[4]-par()$usr[3])/2, col = '#969696', border = NA)
+                rect(par()$usr[1L] - (par()$usr[2L]-par()$usr[1L])/2, par()$usr[4] + (par()$usr[4]-par()$usr[3])/45,
+                     par()$usr[2L] + (par()$usr[2L]-par()$usr[1L])/2, par()$usr[4] + (par()$usr[4]-par()$usr[3])/2, col = '#969696', border = NA)
 
                 if (lang == 'fr'){
-                    text(par()$usr[1] - (par()$usr[2]-par()$usr[1])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/10, paste(country, ': où se trouve ', as.character(reg[j]), '?', sep = ''), font = 2, cex = 1, pos = 4)
-                    text(par()$usr[1] - (par()$usr[2]-par()$usr[1])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/22, 'Cliquez sur la carte (3 essais par région)', font = 2, cex = .65, pos = 4)
+                    text(par()$usr[1L] - (par()$usr[2L]-par()$usr[1L])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/10, paste(country, ': o\u00f9 se trouve ', as.character(reg[j]), '?', sep = ''), font = 2, cex = 1, pos = 4)
+                    text(par()$usr[1L] - (par()$usr[2L]-par()$usr[1L])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/22, 'Cliquez sur la carte (3 essais par r\u00e9gion)', font = 2, cex = .65, pos = 4)
                 }else{
-                    text(par()$usr[1] - (par()$usr[2]-par()$usr[1])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/10, paste(country, ': where is ', as.character(reg[j]), '?', sep = ''), font = 2, cex = 1, pos = 4)
-                    text(par()$usr[1] - (par()$usr[2]-par()$usr[1])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/22, 'Click on the map (3 attempts by region)', font = 2, cex = .65, pos = 4)
+                    text(par()$usr[1L] - (par()$usr[2L]-par()$usr[1L])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/10, paste(country, ': where is ', as.character(reg[j]), '?', sep = ''), font = 2, cex = 1, pos = 4)
+                    text(par()$usr[1L] - (par()$usr[2L]-par()$usr[1L])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/22, 'Click on the map (3 attempts by region)', font = 2, cex = .65, pos = 4)
                 }
 
                 k <- 1
@@ -119,12 +119,12 @@ function(country = NULL, lang = 'en'){
                 cat('\n******************************************\n\n')
             }else{
                 cat('\n\n******************************************\n')
-                cat('\n >>> Merci d\'avoir joué!\n')
-                cat(paste('\n >>> Vous avez cherché ', length(kk), ifelse(length(kk) == 1, ' région sur ', ' régions sur '), length(reg), '\n', sep = ''))
+                cat('\n >>> Merci d\'avoir jou\u00e9!\n')
+                cat(paste('\n >>> Vous avez cherch\u00e9 ', length(kk), ifelse(length(kk) == 1, ' r\u00e9gion sur ', ' r\u00e9gions sur '), length(reg), '\n', sep = ''))
                 cat(paste('\n >>> Votre score final est.......... ', round(100*sum(res)/length(res)), '%', sep = ''))
-                cat(paste('\n\t   > 1ère tentative......... ', round(100*length(kk[kk == 1])/length(kk)), '%', sep = ''))
+                cat(paste('\n\t   > 1\u00e8re tentative......... ', round(100*length(kk[kk == 1])/length(kk)), '%', sep = ''))
                 cat(paste('\n\t   > 2nde tentative......... ', round(100*length(kk[kk == 2])/length(kk)), '%', sep = ''))
-                cat(paste('\n\t   > 3ème tentative......... ', round(100*length(kk[kk == 3])/length(kk)), '%', sep = '', '\n'))
+                cat(paste('\n\t   > 3\u00e8me tentative......... ', round(100*length(kk[kk == 3])/length(kk)), '%', sep = '', '\n'))
                 cat('\n******************************************\n\n')
             }
         }else{

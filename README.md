@@ -22,6 +22,8 @@ library(geographr)
 
 The `geographr` package contains seven main functions. All of these functions are available in two different languages: english (en) and french (fr). English is the default in all the functions.
 
+
+
 #### Refine your geographic skills
 
 ```r
@@ -35,7 +37,7 @@ learning()
 learning(region = 'south america', lang = 'fr')
 ```
 
-![Screenshot](./example1.png)
+![Screenshot](inst/example1.png)
 
 #### Getting the correct spelling of countries and regions
 
@@ -62,7 +64,7 @@ find_country()
 find_country(region = 'africa', lang = 'fr')
 ```
 
-![Screenshot](./example2.png)
+![Screenshot](inst/example2.png)
 
 #### Identify national flags
 
@@ -77,7 +79,7 @@ find_flag()
 find_flag(region = 'asia', lang = 'fr')
 ```
 
-![Screenshot](./example3.png)
+![Screenshot](inst/example3.png)
 
 #### Locate regions on the country map
 
@@ -92,7 +94,7 @@ find_region()
 find_region(country = 'spain', lang = 'en')
 ```
 
-![Screenshot](./example5.png)
+![Screenshot](inst/example5.png)
 
 #### Locate n cities on the map
 
@@ -107,7 +109,7 @@ find_cities()
 find_cities(country = 'france', n = 10, lang = 'en')
 ```
 
-![Screenshot](./example4.png)
+![Screenshot](inst/example4.png)
 
 More than 40,000 towns are available. For instance, one thousand are available for France. But do not overload the map with a too higher number of towns. It will be unclickable...
 
@@ -125,7 +127,7 @@ The function `find_cities()` needs more development. But it works. Enjoy!
 
 ## Acknowledgments
 
-Special thanks to [KevCaz](https://github.com/kevcaz) and [SteveViss](https://github.com/SteveViss) for their feedbacks ;)
+Special thanks to [@KevCaz](https://github.com/kevcaz) and [@SteveViss](https://github.com/SteveViss) for their feedbacks :smile:
 
 ## License
 

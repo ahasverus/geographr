@@ -8,7 +8,7 @@ function(k, resultat, lang){
     rect(-1, 0, 0.5, 0.9365, col = ifelse(k < 4, '#018571', '#a6611a'), border = NA)
 
     if (k < 4){
-        text(x = -.25, y = .75, labels = ifelse(lang == 'en', 'Nice shot!', 'Bien joué!'), font = 2, cex = 1.20)
+        text(x = -.25, y = .75, labels = ifelse(lang == 'en', 'Nice shot!', 'Bien jou\u00e9!'), font = 2, cex = 1.20)
     }else{
         text(x = -.25, y = .75, labels = ifelse(lang == 'en', 'Too bad!', 'Perdu!'), font = 2, cex = 1.20)
     }

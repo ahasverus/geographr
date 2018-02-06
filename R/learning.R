@@ -76,7 +76,7 @@ function(region = 'world', lang = 'en'){
         cat('\n*******************************************************************************\n\n')
     }else{
         cat('\n\n*******************************************************************************\n')
-        cat('\n >>> Prêt à tester vos connaissances?\n')
+        cat('\n >>> Pr\u00eat \u00e0 tester vos connaissances?\n')
         cat('\n    > Essayez find_country() et identifiez les pays sur la carte')
         cat('\n    > Essayez find_flag() et identifiez les drapeaux nationaux')
         cat('\n    > Essayez find_cities() et situez sur la carte les principales villes\n')

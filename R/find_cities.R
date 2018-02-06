@@ -22,15 +22,15 @@ function(country = NULL, lang = 'en', n = 10){
             dev.off()
 
         if (countries[pos, 'iso3'] == 'USA'){
-            pts <- world.cities[world.cities$country.etc == 'USA', ]
+            pts <- maps::world.cities[maps::world.cities$country.etc == 'USA', ]
         }
 
         if (countries[pos, 'iso3'] == 'GBR'){
-            pts <- world.cities[world.cities$country.etc == 'UK', ]
+            pts <- maps::world.cities[maps::world.cities$country.etc == 'UK', ]
         }
 
         if (!(countries[pos, 'iso3'] %in% c('USA', 'GBR'))){
-            pts <- world.cities[world.cities$country.etc == countries[pos, 'country_en'], ]
+            pts <- maps::world.cities[maps::world.cities$country.etc == countries[pos, 'country_en'], ]
         }
 
         pts <- pts[order(pts$pop, decreasing = TRUE), ]
@@ -71,7 +71,7 @@ function(country = NULL, lang = 'en', n = 10){
                      par()$usr[2] + (par()$usr[2]-par()$usr[1])/2, par()$usr[4] + (par()$usr[4]-par()$usr[3])/2, col = '#969696', border = NA)
 
                 if (lang == 'fr'){
-                    text(par()$usr[1] - (par()$usr[2]-par()$usr[1])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/10, paste(country, ': où se trouve ', as.character(pts[j, 'name']), '?', sep = ''), font = 2, cex = 1, pos = 4)
+                    text(par()$usr[1] - (par()$usr[2]-par()$usr[1])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/10, paste(country, ': o\u00f9 se trouve ', as.character(pts[j, 'name']), '?', sep = ''), font = 2, cex = 1, pos = 4)
                     text(par()$usr[1] - (par()$usr[2]-par()$usr[1])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/22, 'Cliquez sur la carte (3 essais par ville)', font = 2, cex = .65, pos = 4)
                 }else{
                     text(par()$usr[1] - (par()$usr[2]-par()$usr[1])/20, par()$usr[4] + (par()$usr[4]-par()$usr[3])/10, paste(country, ': where is ', as.character(pts[j, 'name']), '?', sep = ''), font = 2, cex = 1, pos = 4)
@@ -120,12 +120,12 @@ function(country = NULL, lang = 'en', n = 10){
                 cat('\n******************************************\n\n')
             }else{
                 cat('\n\n******************************************\n')
-                cat('\n >>> Merci d\'avoir joué!\n')
-                cat(paste('\n >>> Vous avez cherché ', length(kk), ifelse(length(kk) == 1, ' ville sur ', ' villes sur '), nrow(pts), '\n', sep = ''))
+                cat('\n >>> Merci d\'avoir jou\u00e9!\n')
+                cat(paste('\n >>> Vous avez cherch\u00e9 ', length(kk), ifelse(length(kk) == 1, ' ville sur ', ' villes sur '), nrow(pts), '\n', sep = ''))
                 cat(paste('\n >>> Votre score final est.......... ', round(100*sum(res)/length(res)), '%', sep = ''))
-                cat(paste('\n\t   > 1ère tentative......... ', round(100*length(kk[kk == 1])/length(kk)), '%', sep = ''))
+                cat(paste('\n\t   > 1\u00e8re tentative......... ', round(100*length(kk[kk == 1])/length(kk)), '%', sep = ''))
                 cat(paste('\n\t   > 2nde tentative......... ', round(100*length(kk[kk == 2])/length(kk)), '%', sep = ''))
-                cat(paste('\n\t   > 3ème tentative......... ', round(100*length(kk[kk == 3])/length(kk)), '%', sep = '', '\n'))
+                cat(paste('\n\t   > 3\u00e8me tentative......... ', round(100*length(kk[kk == 3])/length(kk)), '%', sep = '', '\n'))
                 cat('\n******************************************\n\n')
             }
         }else{
