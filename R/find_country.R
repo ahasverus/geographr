@@ -44,39 +44,39 @@ function(region = 'Europa', lang = 'en'){
         }
 
         if (lang == 'fr'){
-            if (length(grep('Israël|Chypre|Guyana|Haïti|Cuba|Tobago|Antigua|Vincent|Porto|Aruba|Lucie|Curaçao|Taïwan', country)) == 0){
-                if (length(grep('Géorgie|Corée', country)) == 0){
-                    if (length(grep('Etats|États|Émirat', country)) == 0){
+            if (length(grep('Isra\u00ebl|Chypre|Guyana|Ha\u00efti|Cuba|Tobago|Antigua|Vincent|Porto|Aruba|Lucie|Cura\u00e7ao|Ta\u00efwan', country)) == 0){
+                if (length(grep('G\u00e9orgie|Cor\u00e9e', country)) == 0){
+                    if (length(grep('Etats|\u00e9tats|\u00e9mirat', country)) == 0){
                         if (length(grep('Mexique|Belize|Honduras|Cambodge|Laos', country)) == 0){
-                            if (substr(tolower(country), 1, 1) %in% c('a', 'e', 'é', 'è', 'i', 'î', 'o', 'u')){
-                                if (length(grep('îles|iles', tolower(country))) == 0){
-                                    text(.6, 0, paste('Où se trouve l\'', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
+                            if (substr(tolower(country), 1, 1) %in% c('a', 'e', '\u00e9', '\u00e8', 'i', '\u00ee', 'o', 'u')){
+                                if (length(grep('\u00eeles|iles', tolower(country))) == 0){
+                                    text(.6, 0, paste('O\u00f9 se trouve l\'', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
                                 }else{
-                                    text(.6, 0, paste('Où se trouvent les ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
+                                    text(.6, 0, paste('O\u00f9 se trouvent les ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
                                 }
                             }else{
                                 if (substr(tolower(country), nchar(tolower(country)), nchar(tolower(country))) %in% c('e') &&
                                     length(grep('suriname', tolower(country))) == 0){
-                                    text(.6, 0, paste('Où se trouve la ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
+                                    text(.6, 0, paste('O\u00f9 se trouve la ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
                                 }else{
                                     if (substr(tolower(country), nchar(tolower(country)), nchar(tolower(country))) %in% c('s')){
-                                        text(.6, 0, paste('Où se trouvent les ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
+                                        text(.6, 0, paste('O\u00f9 se trouvent les ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
                                     }else{
-                                        text(.6, 0, paste('Où se trouve le ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
+                                        text(.6, 0, paste('O\u00f9 se trouve le ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
                                     }
                                 }
                             }
                         }else{
-                            text(.6, 0, paste('Où se trouve le ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
+                            text(.6, 0, paste('O\u00f9 se trouve le ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
                         }
                     }else{
-                        text(.6, 0, paste('Où se trouvent les ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
+                        text(.6, 0, paste('O\u00f9 se trouvent les ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
                     }
                 }else{
-                    text(.6, 0, paste('Où se trouve la ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
+                    text(.6, 0, paste('O\u00f9 se trouve la ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
                 }
             }else{
-                text(.6, 0, paste('Où se trouve ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
+                text(.6, 0, paste('O\u00f9 se trouve ', country, '?', sep = ''), font = 2, cex = 1.25, pos = 4)
             }
             text(.6, -0.85, 'Cliquez sur la carte (3 essais)', font = 2, cex = .75, pos = 4)
         }
@@ -129,12 +129,12 @@ function(region = 'Europa', lang = 'en'){
         cat('\n******************************************\n\n')
     }else{
         cat('\n\n******************************************\n')
-        cat('\n >>> Merci d\'avoir joué!\n')
-        cat(paste('\n >>> Vous avez joué avec ', length(kk), ' pays sur ', nrow(countries), '\n', sep = ''))
+        cat('\n >>> Merci d\'avoir jou\u00e9!\n')
+        cat(paste('\n >>> Vous avez jou\u00e9 avec ', length(kk), ' pays sur ', nrow(countries), '\n', sep = ''))
         cat(paste('\n >>> Votre score final est.......... ', round(100*sum(res)/length(res)), '%', sep = ''))
-        cat(paste('\n\t   > 1ère tentative......... ', round(100*length(kk[kk == 1])/length(kk)), '%', sep = ''))
+        cat(paste('\n\t   > 1\u00e8re tentative......... ', round(100*length(kk[kk == 1])/length(kk)), '%', sep = ''))
         cat(paste('\n\t   > 2nde tentative......... ', round(100*length(kk[kk == 2])/length(kk)), '%', sep = ''))
-        cat(paste('\n\t   > 3ème tentative......... ', round(100*length(kk[kk == 3])/length(kk)), '%', sep = '', '\n'))
+        cat(paste('\n\t   > 3\u00e8me tentative......... ', round(100*length(kk[kk == 3])/length(kk)), '%', sep = '', '\n'))
         cat('\n******************************************\n\n')
     }
 }

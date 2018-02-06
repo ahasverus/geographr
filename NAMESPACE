@@ -1,3 +1,9 @@
 export(find_cities, find_flag, find_country, find_region, get_country_name, get_region_name, learning)
 
 import(maps, mapproj, sp, png)
+
+importFrom("grDevices", "dev.list", "dev.new", "dev.off", "quartz",
+           "x11")
+importFrom("graphics", "box", "layout", "locator", "par", "points",
+           "rasterImage", "rect", "text")
+importFrom("stats", "na.omit")

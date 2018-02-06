@@ -16,27 +16,27 @@ function(region){
         yrng <- c(-10.00, 55.56)
     }
 
-    if (toupper(region) %in% c('NAM', 'AMERIQUE DU NORD', 'AMÉRIQUE DU NORD', 'NORTH AMERICA')){
+    if (toupper(region) %in% c('NAM', 'AMERIQUE DU NORD', 'AM\u00e9RIQUE DU NORD', 'NORTH AMERICA')){
         xrng <- c(-172.00, -42.00)
         yrng <- c(  15.00,  83.55)
     }
 
-    if (toupper(region) %in% c('SAM', 'AMERIQUE DU SUD', 'AMÉRIQUE DU SUD', 'SOUTH AMERICA')){
+    if (toupper(region) %in% c('SAM', 'AMERIQUE DU SUD', 'AM\u00e9RIQUE DU SUD', 'SOUTH AMERICA')){
         xrng <- c(-93.00, -30.00)
         yrng <- c(-58.70,  13.57)
     }
 
-    if (toupper(region) %in% c('CAM', 'AMERIQUE CENTRALE', 'AMÉRIQUE CENTRALE', 'CENTRAL AMERICA')){
+    if (toupper(region) %in% c('CAM', 'AMERIQUE CENTRALE', 'AM\u00e9RIQUE CENTRALE', 'CENTRAL AMERICA')){
         xrng <- c(-93.00, -57.00)
         yrng <- c(  7.00,  28.70)
     }
 
-    if (toupper(region) %in% c('OCE', 'OCÉANIE', 'OCEANIE', 'OCEANIA')){
+    if (toupper(region) %in% c('OCE', 'OC\u00e9ANIE', 'OCEANIE', 'OCEANIA')){
         xrng <- c(112.00, 182.00)
         yrng <- c(-52.00,  6.30)
     }
 
     map('world', wrap = TRUE, fill = TRUE, col = '#333333', border = NA, xlim = xrng, ylim = yrng, mar = rep(1, 4))
-    map(region = 'Lesotho', wrap = TRUE, fill = TRUE, col = '#333333', border = '#969696', add = TRUE, lwd = .25)
+    map(regions = 'Lesotho', wrap = TRUE, fill = TRUE, col = '#333333', border = '#969696', add = TRUE, lwd = .25)
     box(col = '#333333')
 }

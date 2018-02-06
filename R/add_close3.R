@@ -9,7 +9,7 @@ function(k, resultat, lang){
          col = ifelse(k < 4, '#018571', '#a6611a'), border = NA)
 
     if (k < 4){
-        text(x = (xmn + xmx)/2, y = par()$usr[4] - (par()$usr[4]-par()$usr[3])/10, labels = ifelse(lang == 'en', 'Nice shot!', 'Bien joué!'), font = 2, cex = 1)
+        text(x = (xmn + xmx)/2, y = par()$usr[4] - (par()$usr[4]-par()$usr[3])/10, labels = ifelse(lang == 'en', 'Nice shot!', 'Bien jou\u00e9!'), font = 2, cex = 1)
     }else{
         text(x = (xmn + xmx)/2, y = par()$usr[4] - (par()$usr[4]-par()$usr[3])/10, labels = ifelse(lang == 'en', 'Too bad!', 'Perdu!'), font = 2, cex = 1)
     }

@@ -7,16 +7,16 @@ function(country, perl){
     else
         query <- country
 
-    xy <- map(region = query, wrap = TRUE, plot = FALSE)
+    xy <- map(regions = query, wrap = TRUE, plot = FALSE)
 
     proj.orient <- c(mean(na.omit(xy$y)), mean(na.omit(xy$x)), 0)
 
     par(mar = rep(1, 4), bg = '#969696')
-    map("world", proj = 'orthographic', orient = proj.orient, wrap = TRUE,
+    map("world", projection = 'orthographic', orientation =proj.orient, wrap = TRUE,
         fill = TRUE, border = NA, col = '#333333', add = FALSE)
     map.grid(labels = FALSE, lty = 1, col = 'lightgray', lwd = .25)
 
-    xy <- map(region = query, proj = 'orthographic', orient = proj.orient, wrap = TRUE,
+    xy <- map(regions = query, projection = 'orthographic', orientation =proj.orient, wrap = TRUE,
                fill = TRUE, col = '#416639', border = NA, add = TRUE)
 
     xrng <- range(na.omit(xy$x))

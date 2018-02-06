@@ -7,5 +7,5 @@ function(country, perl, col = '#416639'){
     else
         query <- country
 
-    map(region = query, wrap = TRUE, fill = TRUE, col = col, border = NA, add = TRUE)
+    map(regions = query, wrap = TRUE, fill = TRUE, col = col, border = NA, add = TRUE)
 }

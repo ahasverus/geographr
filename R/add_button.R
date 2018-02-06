@@ -9,7 +9,7 @@ function(lang){
     text(1.32, -1.75, ifelse(lang == 'en', 'Next', 'Suivant'), col = 'black', font = 2)
 
     rect(0.98, -2, 1.20, -1.5, col = '#045a8d', border = NA)
-    text(1.09, -1.75, ifelse(lang == 'en', 'Previous', 'Précédent'), col = 'black', font = 2)
+    text(1.09, -1.75, ifelse(lang == 'en', 'Previous', 'Pr\u00e9c\u00e9dent'), col = 'black', font = 2)
 
     rect(0.57, -2, 0.79, -1.5, col = '#045a8d', border = NA)
     text(.68, -1.75, ifelse(lang == 'en', 'Exit', 'Quitter'), col = 'black', font = 2)

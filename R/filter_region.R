@@ -11,14 +11,14 @@ function(data, region = 'world', lang = 'en'){
     names(labs)[2] <- 'Europe'
     labs[[3]] <- c('ASI', 'ASIE', 'ASIA')
     names(labs)[3] <- 'Asie'
-    labs[[4]] <- c('NAM', 'AMERIQUE DU NORD', 'AMÉRIQUE DU NORD', 'NORTH AMERICA')
-    names(labs)[4] <- 'Amérique du Nord'
-    labs[[5]] <- c('SAM', 'AMERIQUE DU SUD', 'AMÉRIQUE DU SUD', 'SOUTH AMERICA')
-    names(labs)[5] <- 'Amérique du Sud'
-    labs[[6]] <- c('CAM', 'AMERIQUE CENTRALE', 'AMÉRIQUE CENTRALE', 'CENTRAL AMERICA')
-    names(labs)[6] <- 'Amérique centrale'
-    labs[[7]] <- c('OCE', 'OCÉANIE', 'OCEANIE', 'OCEANIA')
-    names(labs)[7] <- 'Océanie'
+    labs[[4]] <- c('NAM', 'AMERIQUE DU NORD', 'AM\u00e9RIQUE DU NORD', 'NORTH AMERICA')
+    names(labs)[4] <- 'Am\u00e9rique du Nord'
+    labs[[5]] <- c('SAM', 'AMERIQUE DU SUD', 'AM\u00e9RIQUE DU SUD', 'SOUTH AMERICA')
+    names(labs)[5] <- 'Am\u00e9rique du Sud'
+    labs[[6]] <- c('CAM', 'AMERIQUE CENTRALE', 'AM\u00e9RIQUE CENTRALE', 'CENTRAL AMERICA')
+    names(labs)[6] <- 'Am\u00e9rique centrale'
+    labs[[7]] <- c('OCE', 'OC\u00e9ANIE', 'OCEANIE', 'OCEANIA')
+    names(labs)[7] <- 'Oc\u00e9anie'
 
     # data <- read.xlsx('continent.xlsx', 1)
     # data <- data[data[ , 'include'] == 1, ]

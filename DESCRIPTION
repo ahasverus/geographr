@@ -1,10 +1,11 @@
 Package: geographr
 Type: Package
 Title: Discover the world geography with fun
-Version: 1.0
+Version: 1.0.0
 Date: 2016-06-02
 Author: Nicolas Casajus
 Maintainer: Nicolas Casajus <nicolas.casajus@gmail.com>
-Description: Graphical games to test geographical skills
+Description: Graphical games to test geographical skills.
 License: GPL (>= 3)
 Depends: maps, mapproj, sp, png
+RoxygenNote: 6.0.1
